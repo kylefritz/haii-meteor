@@ -1,0 +1,47 @@
+<head>
+  <title>haii-meteor</title>
+</head>
+
+<body>
+<div class="container">
+
+  {{> hello}}
+  <div style="display:block">
+  {{> friend_list}}
+  </div>
+</div>
+</body>
+
+<template name="hello">
+<div class="well">
+  <h1>Haiii meteor!!</h1>
+  {{greeting}}
+  <input class="btn btn-primary btn-inverse" type="button" value="boom!" />
+</div>
+</template>
+
+<template name="friend_list">
+ <h2>{{lonely_label}}</h2>
+ {{#if friend_count}}
+  <ul class="nav nav-stacked nav-pills">
+  <!--
+  	<ul class="nav nav-tabs nav-stacked">
+  -->
+  	{{#each friends}}
+  		{{> friend_info}}
+  	{{/each}}		
+  </ul>
+  {{else}}
+  	<p>try:</p>
+  	<pre>
+  		Friends.insert({name:"jon jullian"});
+  	</pre>
+  {{/if}}
+</template>
+
+
+<template name="friend_info">
+	<li class="{{selected_class}}">
+		<a>{{name}}</a>
+	</li>
+</template>

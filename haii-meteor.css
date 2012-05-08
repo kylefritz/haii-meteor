@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+@import url("https://d1eiylix7lbou2.cloudfront.net/ffe/vendor/bootstrap-2.0.2/css/bootstrap.min.css");
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 540px;
+}
